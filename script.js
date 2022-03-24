@@ -61,3 +61,5 @@ const setMenuItems = menu => {
 // console.log(JSON.stringify(weeklyMenu, null, 4));
 
 setMenuItems(weeklyMenu);
+
+// [TODO] Create a nav list to select which menu to choose from
