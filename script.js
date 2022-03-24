@@ -8,7 +8,7 @@ var weeklyMenu = [
   [
     [`Banana Bread`, `Yogurt w/ Fresh Banana & Strawberries`],
     [`Grilled Cheese`, `Tomato Soup`],
-    [`Rice`, `Chicken Curry w/ Potatoes & Carrots`, `Slice of Marble Cake`],
+    [`Chicken Curry w/ Potatoes & Carrots`, `Rice`, `Slice of Marble Cake`],
   ],
   [
     [`Cinnamon Toast`, `Yogurt w/ Fresh Banana & Blueberries`],
@@ -35,7 +35,7 @@ var weeklyMenu = [
   [
     [`Cinnamon Toast`, `Scrambled Eggs`],
     [`Mac and Cheese w/ Diced Hotdog`],
-    [`Rice`, `Stir-fry Chicken`],
+    [`Stir-fry Chicken`, `Rice`],
   ],
 ];
 

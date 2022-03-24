@@ -46,6 +46,10 @@ body {
   list-style: none;
 }
 
+.menu--meal .meal--text:first-child {
+  font-weight: 600;
+}
+
 .meal--text {
   margin: 0 2.4rem;
 }
