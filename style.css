@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -29,7 +29,14 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, 1fr);
-  gap: 1px;
+  /* gap: 1px; */
+}
+
+.grid--item-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(240, 248, 255, 0.267);
 }
 
 .menu-head {
@@ -39,6 +46,7 @@ body {
 
 .menu--meal {
   background-color: rgba(240, 248, 255, 0.267);
+  border: 1px solid brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,4 +60,16 @@ body {
 
 .meal--text {
   margin: 0 2.4rem;
+}
+
+/* NAV SETTINGS */
+.nav-menu-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+/* HELPER SETTINGS */
+.hidden {
+  display: none;
 }
