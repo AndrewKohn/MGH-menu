@@ -15,7 +15,7 @@ body {
 
 .container {
   min-width: 125rem;
-  height: 100vh;
+  min-height: 100vh;
   background-color: blueviolet;
   display: flex;
   justify-content: center;
