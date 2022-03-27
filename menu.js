@@ -1,4 +1,9 @@
 'use strict';
+//  [NOTE]
+//    Save all confirmed menu submissions here.
+//  [TODO]
+//    Learn & find a way to save and automatically input & display submissions on website
+
 var menu1 = [
   [
     [`Donut`, `Fresh Banana`],
