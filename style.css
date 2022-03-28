@@ -22,6 +22,7 @@ body {
   align-items: center;
 }
 
+/* MENU SETTINGS */
 .menu-grid {
   width: 120rem;
   min-height: 80rem;
@@ -30,6 +31,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, 1fr);
   gap: 2px;
+  position: relative;
 }
 
 .grid--item-container {
@@ -64,6 +66,24 @@ body {
 }
 
 /* NAV SETTINGS */
+.nav-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 139, 139, 0.493); */
+}
+
+.nav-menu {
+  width: 30rem;
+  height: 80rem;
+  background-color: rgba(0, 255, 64, 0.445);
+  left: 0;
+}
+
+.nav-menu--opened {
+  margin-top: 3.2rem;
+}
+
 .nav-btn {
   display: flex;
   justify-content: start;
@@ -77,6 +97,27 @@ body {
   height: 3.2rem;
   margin-left: 2rem;
   cursor: pointer;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.list-item {
+  background-color: red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: brown;
 }
 
 /* HELPER SETTINGS */
