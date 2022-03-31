@@ -1,8 +1,13 @@
 'use strict';
 //  [TODO]
-//    Create a nav list when clicking on the menu button
-//    Nav menu should include all present menus
+//  ✔  Create a nav list when clicking on the menu button
+//  ✔  Nav menu should include all present menus
 //    Nav menu should include form to auto e-mail new submissions
+//    Have an event handler for when the user clicks outside of the nav menu in order to close it
+const navBtn = document.querySelector(`.nav-btn`);
+const navBtnOpened = document.querySelector(`.nav-menu--opened`);
+const navScreen = document.querySelector(`.nav-screen`);
+const navmenu = document.querySelector(`.nav-menu`);
 
 let count = 0;
 
@@ -30,31 +35,45 @@ const setMenuItems = menu => {
 setMenuItems(menu1);
 
 // EVENT LISTENERS //
-document.querySelector(`.nav-menu-icon`).addEventListener(`click`, function () {
-  console.log(`button clicked`);
+navBtn.addEventListener(`click`, function () {
+  // console.log(`button clicked`);
+  // for (let i = 0; i < 7; i++) {
+  //   for (let j = 0; j < 3; j++) {
+  //     while (document.getElementById(`meal--${i}-${j}`).firstChild) {
+  //       document
+  //         .getElementById(`meal--${i}-${j}`)
+  //         .removeChild(document.getElementById(`meal--${i}-${j}`).lastChild);
+  //     }
+  //   }
+  // }
+  // console.log(`text removal finished`);
+  // if (count === 0) {
+  //   console.log(count);
+  //   count++;
+  //   setMenuItems(menu1);
+  // } else if (count === 1) {
+  //   console.log(count);
+  //   count++;
+  //   setMenuItems(menu2);
+  // } else if (count < 3) {
+  //   console.log(count);
+  //   count = 0;
+  //   setMenuItems(menu3);
+  // }
 
-  for (let i = 0; i < 7; i++) {
-    for (let j = 0; j < 3; j++) {
-      while (document.getElementById(`meal--${i}-${j}`).firstChild) {
-        document
-          .getElementById(`meal--${i}-${j}`)
-          .removeChild(document.getElementById(`meal--${i}-${j}`).lastChild);
-      }
-    }
-  }
+  // navBtn.classList.toggle(`hidden`);
 
-  console.log(`text removal finished`);
-  if (count === 0) {
-    console.log(count);
-    count++;
-    setMenuItems(menu1);
-  } else if (count === 1) {
-    console.log(count);
-    count++;
-    setMenuItems(menu2);
-  } else if (count < 3) {
-    console.log(count);
-    count = 0;
-    setMenuItems(menu3);
-  }
+  navScreen.classList.toggle(`hidden`);
+  navmenu.classList.toggle(`anim--slide-left`);
+  navmenu.classList.toggle(`anim--slide-right`);
+});
+
+navBtnOpened.addEventListener(`click`, function () {
+  navmenu.classList.toggle(`anim--slide-left`);
+  navmenu.classList.toggle(`anim--slide-right`);
+
+  // 0.5s delay to animation performance
+  setTimeout(() => {
+    navScreen.classList.toggle(`hidden`);
+  }, 500);
 });
