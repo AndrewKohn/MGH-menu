@@ -16,7 +16,7 @@ body {
 .container {
   min-width: 125rem;
   min-height: 100vh;
-  background-color: blueviolet;
+  background-color: #eee;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
 .menu-grid {
   width: 120rem;
   min-height: 80rem;
-  background-color: brown;
+  background-color: rgb(165, 6, 6);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -38,8 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
-  /* border: 1px solid rgba(240, 248, 255, 0.267); */
+  background-color: rgb(164, 167, 170);
 }
 
 .menu-head {
@@ -48,8 +47,7 @@ body {
 }
 
 .menu--meal {
-  background-color: rgba(240, 248, 255, 0.267);
-  /* border: 1px solid brown; */
+  background-color: rgb(223, 227, 231);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +68,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 139, 139, 0.493);
+  background-color: rgba(164, 167, 170, 0.459);
   overflow: hidden;
 }
 
@@ -90,7 +88,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  background-color: blue;
+  background-color: rgb(164, 167, 170);
   /* border: 1px solid rgba(240, 248, 255, 0.267); */
 }
 
@@ -157,4 +155,8 @@ body {
 /* HELPER SETTINGS */
 .hidden {
   display: none;
+}
+
+.menu-item--hover {
+  background-color: red;
 }

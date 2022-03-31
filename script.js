@@ -8,6 +8,8 @@ const navBtn = document.querySelector(`.nav-btn`);
 const navBtnOpened = document.querySelector(`.nav-menu--opened`);
 const navScreen = document.querySelector(`.nav-screen`);
 const navmenu = document.querySelector(`.nav-menu`);
+const menuGrid = document.querySelector(`.menu-grid`);
+const menuItem = document.querySelector(`.menu--meal`);
 
 let count = 0;
 
@@ -76,4 +78,10 @@ navBtnOpened.addEventListener(`click`, function () {
   setTimeout(() => {
     navScreen.classList.toggle(`hidden`);
   }, 500);
+});
+
+menuGrid.addEventListener(`mouseover`, e => {
+  if (menuItem === e.target) {
+    menuItem.classList.add(`menu-item--hover`);
+  }
 });
