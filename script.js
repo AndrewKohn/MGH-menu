@@ -1,18 +1,29 @@
 'use strict';
 //  [TODO]
-//  ✔  Create a nav list when clicking on the menu button
-//  ✔  Nav menu should include all present menus
+//  ✅  Create a nav list when clicking on the menu button
+//  ✅  Nav menu should include all present menus
+//  ✅  Have an event handler for when the user clicks outside of the nav menu in order to close it
 //    Nav menu should include form to auto e-mail new submissions
-//    Have an event handler for when the user clicks outside of the nav menu in order to close it
-const navBtn = document.querySelector(`.nav-btn`);
+//    Add hover effects over day/meal according to respective hovered item.
+
+// console.log(weeklyMenu);
+// console.log(JSON.stringify(weeklyMenu, null, 4));
+
+const overlay = document.querySelector(`.overlay`);
+const navBtn = document.querySelector(`.nav-menu-btn`);
 const navBtnOpened = document.querySelector(`.nav-menu--opened`);
 const navScreen = document.querySelector(`.nav-screen`);
-const navmenu = document.querySelector(`.nav-menu`);
+const navMenu = document.querySelector(`.nav-menu`);
 const menuGrid = document.querySelector(`.menu-grid`);
 const menuItem = document.querySelector(`.menu--meal`);
+const listMenu1 = document.querySelector(`.list--menu-0`);
+const listMenu2 = document.querySelector(`.list--menu-1`);
+const listMenu3 = document.querySelector(`.list--menu-2`);
+const menuNumberEl = document.querySelector(`.menu-number`);
 
 let count = 0;
 
+//
 // Set menu[day][mealTime][mealItem] to menu grid
 const setMenuItems = menu => {
   for (let i = 0; i < menu.length; i++) {
@@ -26,62 +37,81 @@ const setMenuItems = menu => {
         );
       }
 
-      console.log(i, j, menu[i][j]);
+      // console.log(i, j, menu[i][j]);
     }
   }
 };
 
-// console.log(weeklyMenu);
-// console.log(JSON.stringify(weeklyMenu, null, 4));
+// Removes all menu items from grid
+const removeGridMenuElements = () => {
+  for (let i = 0; i < 7; i++) {
+    for (let j = 0; j < 3; j++) {
+      while (document.getElementById(`meal--${i}-${j}`).firstChild) {
+        document
+          .getElementById(`meal--${i}-${j}`)
+          .removeChild(document.getElementById(`meal--${i}-${j}`).lastChild);
+      }
+    }
+  }
+};
 
-setMenuItems(menu1);
-
-// EVENT LISTENERS //
-navBtn.addEventListener(`click`, function () {
-  // console.log(`button clicked`);
-  // for (let i = 0; i < 7; i++) {
-  //   for (let j = 0; j < 3; j++) {
-  //     while (document.getElementById(`meal--${i}-${j}`).firstChild) {
-  //       document
-  //         .getElementById(`meal--${i}-${j}`)
-  //         .removeChild(document.getElementById(`meal--${i}-${j}`).lastChild);
-  //     }
-  //   }
-  // }
-  // console.log(`text removal finished`);
-  // if (count === 0) {
-  //   console.log(count);
-  //   count++;
-  //   setMenuItems(menu1);
-  // } else if (count === 1) {
-  //   console.log(count);
-  //   count++;
-  //   setMenuItems(menu2);
-  // } else if (count < 3) {
-  //   console.log(count);
-  //   count = 0;
-  //   setMenuItems(menu3);
-  // }
-
-  // navBtn.classList.toggle(`hidden`);
-
+// Opens nav menu
+const openMenu = () => {
   navScreen.classList.toggle(`hidden`);
-  navmenu.classList.toggle(`anim--slide-left`);
-  navmenu.classList.toggle(`anim--slide-right`);
-});
+  overlay.classList.toggle(`hidden`);
+  navMenu.classList.toggle(`anim--slide-left`);
+  navMenu.classList.toggle(`anim--slide-right`);
+  overlay.classList.toggle(`anim--blur-overlay`);
+  overlay.classList.toggle(`anim--unblur-overlay`);
+};
 
-navBtnOpened.addEventListener(`click`, function () {
-  navmenu.classList.toggle(`anim--slide-left`);
-  navmenu.classList.toggle(`anim--slide-right`);
+// Closes nav menu
+const closeMenu = () => {
+  navMenu.classList.toggle(`anim--slide-left`);
+  navMenu.classList.toggle(`anim--slide-right`);
+  overlay.classList.toggle(`anim--blur-overlay`);
+  overlay.classList.toggle(`anim--unblur-overlay`);
 
   // 0.5s delay to animation performance
   setTimeout(() => {
     navScreen.classList.toggle(`hidden`);
+    overlay.classList.toggle(`hidden`);
   }, 500);
+};
+
+setMenuItems(menu1);
+
+// EVENT LISTENERS //
+// Menu Button Events
+overlay.addEventListener(`click`, closeMenu);
+navBtn.addEventListener(`click`, openMenu);
+navBtnOpened.addEventListener(`click`, closeMenu);
+
+// Menu grid hover effect
+// menuGrid.addEventListener(`mouseover`, e => {
+//   if (menuItem === e.target) {
+//     menuItem.classList.add(`menu-item--hover`);
+//   }
+// });
+
+// Menu List Events
+listMenu1.addEventListener(`click`, function () {
+  removeGridMenuElements();
+  setMenuItems(menu1);
+  menuNumberEl.textContent = `1`;
+  closeMenu();
 });
 
-menuGrid.addEventListener(`mouseover`, e => {
-  if (menuItem === e.target) {
-    menuItem.classList.add(`menu-item--hover`);
-  }
+listMenu2.addEventListener(`click`, function () {
+  removeGridMenuElements();
+  setMenuItems(menu2);
+  menuNumberEl.textContent = `2`;
+  closeMenu();
+});
+
+listMenu3.addEventListener(`click`, function () {
+  removeGridMenuElements();
+  setMenuItems(menu3);
+  menuNumberEl.textContent = `3`;
+  closeMenu();
 });
