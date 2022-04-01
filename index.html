@@ -15,33 +15,52 @@
   </head>
   <body>
     <main class="container">
+      <div class="overlay anim--unblur-overlay hidden"></div>
       <div class="menu-grid">
         <!-- Nav menu -->
         <div class="nav-screen hidden">
           <nav class="nav-menu anim--slide-left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="nav-menu-icon nav-menu--opened"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+            <div class="nav-btn-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="nav-menu-icon nav-menu--opened"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="nav-menu-icon nav-menu--opened"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+
             <ul class="menu-list">
-              <li class="list-item">
-                <p>MENU 1</p>
+              <li class="list-item list--menu-0">
+                <p class="list-item--text">MENU 1</p>
               </li>
-              <li class="list-item">
-                <p>MENU 2</p>
+              <li class="list-item list--menu-1">
+                <p class="list-item--text">MENU 2</p>
               </li>
-              <li class="list-item">
-                <p>MENU 3</p>
+              <li class="list-item list--menu-2">
+                <p class="list-item--text">MENU 3</p>
               </li>
             </ul>
           </nav>
@@ -51,7 +70,7 @@
         <div class="nav-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="nav-menu-icon"
+            class="nav-menu-icon nav-menu-btn"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -63,21 +82,23 @@
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
+
+          <h1 class="menu-title">MENU <span class="menu-number">1</h1>
         </div>
 
         <div class="grid--item-container">
-          <h2 class="menu-head">BREAKFAST</h2>
+          <h2 class="menu-head" id="meal--0">BREAKFAST</h2>
         </div>
         <div class="grid--item-container">
-          <h2 class="menu-head">LUNCH</h2>
+          <h2 class="menu-head" id="meal--1">LUNCH</h2>
         </div>
         <div class="grid--item-container">
-          <h2 class="menu-head">DINNER</h2>
+          <h2 class="menu-head" id="meal--2">DINNER</h2>
         </div>
 
         <!-- Monday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">MONDAY</h2>
+          <h2 class="menu-head" id="day--0">MONDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--0-0"></ul>
         <ul class="menu--meal" id="meal--0-1"></ul>
@@ -85,7 +106,7 @@
 
         <!-- Tuesday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">TUESDAY</h2>
+          <h2 class="menu-head" id="day--1">TUESDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--1-0"></ul>
         <ul class="menu--meal" id="meal--1-1"></ul>
@@ -93,7 +114,7 @@
 
         <!-- Wednesday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">WEDNESDAY</h2>
+          <h2 class="menu-head" id="day--2">WEDNESDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--2-0"></ul>
         <ul class="menu--meal" id="meal--2-1"></ul>
@@ -101,7 +122,7 @@
 
         <!-- Thursday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">THURSDAY</h2>
+          <h2 class="menu-head" id="day--3">THURSDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--3-0"></ul>
         <ul class="menu--meal" id="meal--3-1"></ul>
@@ -109,7 +130,7 @@
 
         <!-- Friday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">FRIDAY</h2>
+          <h2 class="menu-head" id="day--4">FRIDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--4-0"></ul>
         <ul class="menu--meal" id="meal--4-1"></ul>
@@ -117,7 +138,7 @@
 
         <!-- Saturday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">SATURDAY</h2>
+          <h2 class="menu-head" id="day--5">SATURDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--5-0"></ul>
         <ul class="menu--meal" id="meal--5-1"></ul>
@@ -125,7 +146,7 @@
 
         <!-- Sunday -->
         <div class="grid--item-container">
-          <h2 class="menu-head">SUNDAY</h2>
+          <h2 class="menu-head" id="day--6">SUNDAY</h2>
         </div>
         <ul class="menu--meal" id="meal--6-0"></ul>
         <ul class="menu--meal" id="meal--6-1"></ul>
