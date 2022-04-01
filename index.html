@@ -47,7 +47,7 @@
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  d="M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                 />
               </svg>
             </div>
@@ -151,6 +151,96 @@
         <ul class="menu--meal" id="meal--6-0"></ul>
         <ul class="menu--meal" id="meal--6-1"></ul>
         <ul class="menu--meal" id="meal--6-2"></ul>
+      </div>
+
+      <!-- Submission Form -->
+      <div class="form-container">
+        <h3 class="form-title">New Menu Submission</h3>
+        <p class="form-information">Complete this form to submit a new menu.</p>
+        <p class="form-information">
+          For questions/concerns, contact
+          <a class="email-contact" href="mailto:andy@akohn.dev"
+            >andy@akohn.dev</a
+          >.
+        </p>
+
+        <form
+          class="menu-form"
+          action="https://formsubmit.co/andy@akohn.dev"
+          method="POST"
+        >
+          <p class="form-day-header">Monday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="MON Morning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="MON Afternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="MON Dinner" placeholder="Dinner Meal" />
+          </div>
+          <p class="form-header">Tuesday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="TUE Morning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="TUE Afternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="TUE Dinner" placeholder="Dinner Meal" />
+          </div>
+          <p class="form-header">Wednesday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="WED Morning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="WED Afternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="WED Dinner" placeholder="inner Meal" />
+          </div>
+          <p class="form-header">Thursday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="THURMorning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="THURAfternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="THURDinner" placeholder="Dinner Meal" />
+          </div>
+          <p class="form-header">Friday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="FRI Morning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="FRI Afternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="FRI Dinner" placeholder="Dinner Meal" />
+          </div>
+          <p class="form-header">Saturday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="SAT Morning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="SAT Afternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="SAT Dinner" placeholder="Dinner Meal" />
+          </div>
+          <p class="form-header">Sunday</p>
+          <div class="form-meal-wrapper">
+            <input type="text" name="SUN Morning" placeholder="Morning Meal" />
+            <input
+              type="text"
+              name="SUN Afternoon"
+              placeholder="Afternoon Meal"
+            />
+            <input type="text" name="SUN Dinner" placeholder="Dinner Meal" />
+          </div>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </main>
   </body>

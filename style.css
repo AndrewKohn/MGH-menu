@@ -33,7 +33,9 @@ body {
   align-items: center;
 }
 
+/* ************* */
 /* MENU SETTINGS */
+/* ************* */
 .menu-grid {
   width: 120rem;
   min-height: 80rem;
@@ -93,7 +95,9 @@ body {
   color: var(--text);
 }
 
+/* ************ */
 /* NAV SETTINGS */
+/* ************ */
 .overlay {
   position: absolute;
   top: 0;
@@ -182,7 +186,52 @@ body {
   color: var(--background);
 }
 
+/* ************* */
+/* FORM SETTINGS */
+/* ************* */
+.form-container {
+  position: absolute;
+  width: 100rem;
+  height: 75rem;
+  background-color: var(--secondary);
+  border: 3px solid var(--tertiary);
+  border-radius: 9px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-title {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: var(--text);
+  margin: 3.6rem 0 2.8rem 0;
+}
+
+.form-information {
+  font-size: 2rem;
+  line-height: 3.2rem;
+}
+
+.email-contact:link,
+.email-contact:visited {
+  font-weight: 600;
+  color: var(--tertiary);
+  text-decoration: none;
+}
+.email-contact:hover,
+.email-contact:active {
+  color: var(--title);
+}
+
+.menu-form {
+  margin-top: 4rem;
+}
+
+/* *************** */
 /* HELPER SETTINGS */
+/* *************** */
 .hidden {
   display: none;
 }
@@ -245,8 +294,4 @@ body {
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(0);
   }
-}
-
-.menu-item--hover {
-  background-color: red;
 }
