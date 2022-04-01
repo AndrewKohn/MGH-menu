@@ -1,3 +1,14 @@
+:root {
+  /* COLOR SCHEME SETTINGS */
+  --background: #28262c;
+  --primary: #b9baa3;
+  --secondary: #d6d5c9;
+  --tertiary: #0b7a75;
+  --text: #333;
+  --title: #f71735;
+  --hovered: #d1d0c6;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +27,7 @@ body {
 .container {
   min-width: 125rem;
   min-height: 100vh;
-  background-color: #eee;
+  background-color: var(--background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +37,7 @@ body {
 .menu-grid {
   width: 120rem;
   min-height: 80rem;
-  background-color: rgb(165, 6, 6);
+  background-color: var(--tertiary);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(8, 1fr);
@@ -38,16 +49,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(164, 167, 170);
+  background-color: var(--primary);
 }
 
 .menu-head {
   justify-self: center;
   align-self: center;
+  letter-spacing: 0.3rem;
+  color: var(--text);
 }
 
 .menu--meal {
-  background-color: rgb(223, 227, 231);
+  background-color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,27 +68,56 @@ body {
   list-style: none;
 }
 
+.menu--meal:hover {
+  background-color: var(--hovered);
+}
+
+.menu-title {
+  margin-right: 2rem;
+  font-size: 3.2rem;
+  letter-spacing: 0.4rem;
+  color: var(--text);
+}
+
+.menu-number {
+  color: var(--title);
+}
+
 .menu--meal .meal--text:first-child {
   font-weight: 600;
+  color: var(--tertiary);
 }
 
 .meal--text {
   margin: 0 2.4rem;
+  color: var(--text);
 }
 
 /* NAV SETTINGS */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
 .nav-screen {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(164, 167, 170, 0.459);
+  /* background-color: rgba(164, 167, 170, 0.459); */
   overflow: hidden;
+  z-index: 10;
 }
 
 .nav-menu {
   width: 30rem;
   height: 80rem;
-  background-color: rgba(255, 255, 255, 0.911);
+  background-color: var(--hovered);
   left: 0;
   /* animation: 0.5s linear slide-right; */
 }
@@ -84,11 +126,17 @@ body {
   margin-top: 3.2rem;
 }
 
+.nav-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-btn {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgb(164, 167, 170);
+  background-color: var(--primary);
   /* border: 1px solid rgba(240, 248, 255, 0.267); */
 }
 
@@ -96,7 +144,13 @@ body {
   width: 3.2rem;
   height: 3.2rem;
   margin-left: 2rem;
+  margin-right: 2rem;
   cursor: pointer;
+  color: var(--background);
+}
+
+.nav-menu-icon:hover {
+  transform: scale(1.075);
 }
 
 .menu-list {
@@ -110,7 +164,7 @@ body {
 }
 
 .list-item {
-  background-color: red;
+  background-color: var(--tertiary);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -119,7 +173,18 @@ body {
 }
 
 .list-item:hover {
-  background-color: brown;
+  background-color: var(--title);
+}
+
+.list-item--text {
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--background);
+}
+
+/* HELPER SETTINGS */
+.hidden {
+  display: none;
 }
 
 .anim--slide-right {
@@ -128,6 +193,14 @@ body {
 
 .anim--slide-left {
   animation: 0.5s linear slide-left;
+}
+
+.anim--blur-overlay {
+  animation: 0.5s linear blur-overlay;
+}
+
+.anim--unblur-overlay {
+  animation: 0.5s linear unblur-overlay;
 }
 
 @keyframes slide-right {
@@ -152,9 +225,26 @@ body {
   }
 }
 
-/* HELPER SETTINGS */
-.hidden {
-  display: none;
+@keyframes blur-overlay {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+  }
+}
+
+@keyframes unblur-overlay {
+  0% {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0);
+  }
 }
 
 .menu-item--hover {
