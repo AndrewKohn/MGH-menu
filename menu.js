@@ -58,7 +58,7 @@ var menu2 = [
     [`Pork lo mein w/ mixed veggies`, `Banana w/ jello`, `Dinner roll`],
   ],
   [
-    [`Peanut butter sandwich`, `Yogurt q/ fresh fruits`],
+    [`Peanut butter sandwich`, `Yogurt w/ fresh fruits`],
     [`Chicken macaroni w/ soup and veggies`, `Pretzel roll`],
     [`Meatballs`, `Mashed potatoes`, `Carrots & corn`],
   ],
