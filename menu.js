@@ -3,6 +3,93 @@
 //    Save all confirmed menu submissions here.
 //  [TODO]
 //    Learn & find a way to save and automatically input & display submissions on website
+const gridHtml = `
+<div class="menu-grid hidden">
+        <!-- Menu Headers -->
+        <div class="nav-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="nav-menu-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </div>
+
+        <div class="grid--item-container">
+          <h2 class="menu-head">BREAKFAST</h2>
+        </div>
+        <div class="grid--item-container">
+          <h2 class="menu-head">LUNCH</h2>
+        </div>
+        <div class="grid--item-container">
+          <h2 class="menu-head">DINNER</h2>
+        </div>
+
+        <!-- Monday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">MONDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--0-0"></ul>
+        <ul class="menu--meal" id="meal--0-1"></ul>
+        <ul class="menu--meal" id="meal--0-2"></ul>
+
+        <!-- Tuesday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">TUESDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--1-0"></ul>
+        <ul class="menu--meal" id="meal--1-1"></ul>
+        <ul class="menu--meal" id="meal--1-2"></ul>
+
+        <!-- Wednesday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">WEDNESDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--2-0"></ul>
+        <ul class="menu--meal" id="meal--2-1"></ul>
+        <ul class="menu--meal" id="meal--2-2"></ul>
+
+        <!-- Thursday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">THURSDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--3-0"></ul>
+        <ul class="menu--meal" id="meal--3-1"></ul>
+        <ul class="menu--meal" id="meal--3-2"></ul>
+
+        <!-- Friday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">FRIDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--4-0"></ul>
+        <ul class="menu--meal" id="meal--4-1"></ul>
+        <ul class="menu--meal" id="meal--4-2"></ul>
+
+        <!-- Saturday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">SATURDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--5-0"></ul>
+        <ul class="menu--meal" id="meal--5-1"></ul>
+        <ul class="menu--meal" id="meal--5-2"></ul>
+
+        <!-- Sunday -->
+        <div class="grid--item-container">
+          <h2 class="menu-head">SUNDAY</h2>
+        </div>
+        <ul class="menu--meal" id="meal--6-0"></ul>
+        <ul class="menu--meal" id="meal--6-1"></ul>
+        <ul class="menu--meal" id="meal--6-2"></ul>
+      </div>
+`;
 
 var menu1 = [
   [
@@ -123,91 +210,3 @@ var menu3 = [
     [`Spaghetti w/ Meatsauce`, `Dinner Roll`],
   ],
 ];
-
-const gridHtml = `
-<div class="menu-grid hidden">
-        <!-- Menu Headers -->
-        <div class="nav-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="nav-menu-icon"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </div>
-
-        <div class="grid--item-container">
-          <h2 class="menu-head">BREAKFAST</h2>
-        </div>
-        <div class="grid--item-container">
-          <h2 class="menu-head">LUNCH</h2>
-        </div>
-        <div class="grid--item-container">
-          <h2 class="menu-head">DINNER</h2>
-        </div>
-
-        <!-- Monday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">MONDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--0-0"></ul>
-        <ul class="menu--meal" id="meal--0-1"></ul>
-        <ul class="menu--meal" id="meal--0-2"></ul>
-
-        <!-- Tuesday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">TUESDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--1-0"></ul>
-        <ul class="menu--meal" id="meal--1-1"></ul>
-        <ul class="menu--meal" id="meal--1-2"></ul>
-
-        <!-- Wednesday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">WEDNESDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--2-0"></ul>
-        <ul class="menu--meal" id="meal--2-1"></ul>
-        <ul class="menu--meal" id="meal--2-2"></ul>
-
-        <!-- Thursday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">THURSDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--3-0"></ul>
-        <ul class="menu--meal" id="meal--3-1"></ul>
-        <ul class="menu--meal" id="meal--3-2"></ul>
-
-        <!-- Friday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">FRIDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--4-0"></ul>
-        <ul class="menu--meal" id="meal--4-1"></ul>
-        <ul class="menu--meal" id="meal--4-2"></ul>
-
-        <!-- Saturday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">SATURDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--5-0"></ul>
-        <ul class="menu--meal" id="meal--5-1"></ul>
-        <ul class="menu--meal" id="meal--5-2"></ul>
-
-        <!-- Sunday -->
-        <div class="grid--item-container">
-          <h2 class="menu-head">SUNDAY</h2>
-        </div>
-        <ul class="menu--meal" id="meal--6-0"></ul>
-        <ul class="menu--meal" id="meal--6-1"></ul>
-        <ul class="menu--meal" id="meal--6-2"></ul>
-      </div>
-`;
