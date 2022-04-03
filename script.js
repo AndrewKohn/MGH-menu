@@ -20,10 +20,10 @@ const listMenu1 = document.querySelector(`.list--menu-0`);
 const listMenu2 = document.querySelector(`.list--menu-1`);
 const listMenu3 = document.querySelector(`.list--menu-2`);
 const menuNumberEl = document.querySelector(`.menu-number`);
+const formSubmitBtn = document.querySelector(`.form-submit-btn`);
 
 let count = 0;
 
-//
 // Set menu[day][mealTime][mealItem] to menu grid
 const setMenuItems = menu => {
   for (let i = 0; i < menu.length; i++) {
@@ -79,6 +79,20 @@ const closeMenu = () => {
   }, 500);
 };
 
+//  [TODO]  if string contains a `,`, then split it to a new string
+const getSubmissionInfo = (currentDay, currentMeal) => {
+  const submitDataInput = document.getElementById(
+    `form-input--${currentDay}-${currentMeal}`
+  );
+
+  if (submitDataInput.textContent.includes(`,`)) {
+    return submitDataInput.value;
+  } else {
+    return `[` + submitDataInput.value + `]`;
+  }
+};
+
+// INIT ON STARTUP
 setMenuItems(menu1);
 
 // EVENT LISTENERS //
@@ -114,4 +128,15 @@ listMenu3.addEventListener(`click`, function () {
   setMenuItems(menu3);
   menuNumberEl.textContent = `3`;
   closeMenu();
+});
+
+// Form Submission Event
+formSubmitBtn.addEventListener(`click`, e => {
+  e.preventDefault();
+
+  for (let day = 0; day < 7; day++) {
+    for (let mealTime = 0; mealTime < 3; mealTime++) {
+      console.log(day, mealTime, getSubmissionInfo(day, mealTime));
+    }
+  }
 });
