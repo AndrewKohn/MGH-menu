@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
@@ -38,7 +38,7 @@
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="nav-menu-icon nav-menu--opened"
+                class="nav-menu-icon nav-menu--opened add-menu-btn"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -154,9 +154,28 @@
       </div>
 
       <!-- Submission Form -->
-      <div class="form-container">
+      <div class="form-container anim--fade-out hidden">
+        <button class="close-form-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="nav-menu-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         <h3 class="form-title">New Menu Submission</h3>
         <p class="form-information">Complete this form to submit a new menu.</p>
+        <p class="form-information">
+          Separate each meal item with a comma, if possible.
+        </p>
         <p class="form-information">
           For questions/concerns, contact
           <a class="email-contact" href="mailto:andy@akohn.dev"
@@ -314,10 +333,18 @@
           </div>
         </div>
 
-        <form class="menu-form">
+        <form
+          class="menu-form"
+          action="https://formsubmit.co/andy@akohn.dev"
+          method="POST"
+        >
+          <input class="html-input hidden" name="Menu Submission" />
           <button class="form-submit-btn" type="submit">Send</button>
         </form>
       </div>
+
+      <!-- Last updated -->
+      <p class="last-updated"></p>
     </main>
   </body>
   <script src="menu.js"></script>

@@ -3,10 +3,11 @@
   --background: #28262c;
   --primary: #b9baa3;
   --secondary: #d6d5c9;
+  --hovered: #d1d0c6;
   --tertiary: #0b7a75;
+  --tertiary-hovered: #095e59;
   --text: #333;
   --title: #f71735;
-  --hovered: #d1d0c6;
 }
 
 * {
@@ -31,6 +32,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.last-updated {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--primary);
+  bottom: 0;
+  transform: translateY(-50%);
 }
 
 /* ************* */
@@ -170,19 +181,30 @@ body {
 .list-item {
   background-color: var(--tertiary);
   width: 100%;
+  padding: 1.2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
 
-.list-item:hover {
-  background-color: var(--title);
+.list-item:active {
+  background-color: var(--tertiary-hovered);
+}
+.list-item:hover .list-item--text {
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.list-item:active .list-item--text {
+  color: var(--title);
+  /* letter-spacing: 1px; */
 }
 
 .list-item--text {
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   color: var(--background);
 }
 
@@ -197,16 +219,17 @@ body {
   border: 3px solid var(--tertiary);
   border-radius: 9px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 9;
 }
 
 .form-title {
   font-size: 4rem;
   letter-spacing: 3px;
   color: var(--text);
-  margin: 3.6rem 0 2.8rem 0;
+  margin-bottom: 2.8rem;
 }
 
 .form-information {
@@ -233,6 +256,36 @@ body {
   margin-top: 4rem;
 }
 
+.close-form-btn {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(50%);
+}
+
+.form-submit-btn {
+  cursor: pointer;
+  padding: 1.6rem 1.2rem;
+  border-radius: 13px;
+  border: none;
+  background-color: var(--tertiary);
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.form-submit-btn:hover {
+  background-color: var(--tertiary-hovered);
+}
+
+.form-submit-btn:active {
+  background-color: var(--title);
+  font-weight: 600;
+}
+
 /* *************** */
 /* HELPER SETTINGS */
 /* *************** */
@@ -254,6 +307,14 @@ body {
 
 .anim--unblur-overlay {
   animation: 0.5s linear unblur-overlay;
+}
+
+.anim--fade-in {
+  animation: 0.5s linear fade-in;
+}
+
+.anim--fade-out {
+  animation: 0.5s linear fade-out;
 }
 
 @keyframes slide-right {
@@ -297,5 +358,23 @@ body {
   100% {
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
   }
 }
