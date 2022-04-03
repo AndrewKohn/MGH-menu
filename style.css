@@ -3,7 +3,7 @@
   --background: #28262c;
   --primary: #b9baa3;
   --secondary: #d6d5c9;
-  --hovered: #d1d0c6;
+  --hovered: #bebeb3;
   --tertiary: #0b7a75;
   --tertiary-hovered: #095e59;
   --text: #333;
@@ -83,6 +83,10 @@ body {
 
 .menu--meal:hover {
   background-color: var(--hovered);
+}
+
+.menu--meal:hover .meal--text:first-child {
+  color: var(--title);
 }
 
 .menu-title {
@@ -229,12 +233,12 @@ body {
   font-size: 4rem;
   letter-spacing: 3px;
   color: var(--text);
-  margin-bottom: 2.8rem;
+  margin-bottom: 2rem;
 }
 
 .form-information {
-  font-size: 2rem;
-  line-height: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .email-contact:link,
@@ -249,11 +253,22 @@ body {
 }
 
 .menu-form {
-  margin-top: 4rem;
+  margin-top: 3.2rem;
+}
+
+.form-header {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1.2rem 0 0.4rem;
 }
 
 .menu-form--inputs {
-  margin-top: 4rem;
+  margin-top: 1.2rem;
+}
+
+.form-meal-wrapper {
+  display: flex;
+  gap: 2rem;
 }
 
 .close-form-btn {
@@ -267,10 +282,11 @@ body {
 
 .form-submit-btn {
   cursor: pointer;
-  padding: 1.6rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 13px;
   border: none;
   background-color: var(--tertiary);
+  box-shadow: 0 0 4px 2px var(--tertiary-hovered);
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 500;
@@ -283,7 +299,32 @@ body {
 
 .form-submit-btn:active {
   background-color: var(--title);
+  box-shadow: 0 0 4px 4px var(--title);
+
   font-weight: 600;
+}
+
+.divider {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.divider--fade-left {
+  width: 10rem;
+  height: 3px;
+  background: linear-gradient(to left, var(--tertiary), #0b7a7400);
+}
+
+.divider--center {
+  width: 47.5rem;
+  height: 3px;
+  background-color: var(--tertiary);
+}
+
+.divider--fade-right {
+  width: 10rem;
+  height: 3px;
+  background: linear-gradient(to right, var(--tertiary), #0b7a7400);
 }
 
 /* *************** */
