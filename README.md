@@ -1,11 +1,12 @@
-# MGH Menu
+<h1 align="center">MGH Menu</h1>
 
 ![Site preview screenshot](img/site-preview.png)
 
-### Deployed via Netlify
+<h3 align="center">Deployed via Netlify</h3>
 
-https://mghmenu.netlify.app/
+<a href="https://mghmenu.netlify.app/" align="center">https://mghmenu.netlify.app/</a>
 
+<hr>
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -19,10 +20,10 @@ https://mghmenu.netlify.app/
     <li><a href="#purpose">Purpose</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
+<hr>
 
 ## About The Project
 
@@ -40,7 +41,7 @@ This project allows the user to view/submit weekly menus.
 
 #### Resources Involved
 
-<a href="https://formsubmit.co/">https://formsubmit.co/</a>
+<a href="https://formsubmit.co/">https://formsubmit.co/</a><br>
 This allows the submission form to automatically send new menus directly to my email without needing to open up an email client and having the user expose their own email address.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
