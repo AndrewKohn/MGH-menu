@@ -24,6 +24,7 @@
     <li><a href="#purpose">Purpose</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#what-i-learned">What I learned</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
