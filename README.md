@@ -1,10 +1,14 @@
+<div id="top"></div>
+
 <h1 align="center">MGH Menu</h1>
 
 ![Site preview screenshot](img/site-preview.png)
 
 <h3 align="center">Deployed via Netlify</h3>
 
-<a href="https://mghmenu.netlify.app/" align="center">https://mghmenu.netlify.app/</a>
+<div align="center">
+<a href="https://mghmenu.netlify.app/">https://mghmenu.netlify.app/</a>
+</div>
 
 <hr>
 <details>
@@ -60,9 +64,14 @@ When submitting a new menu, all inputs will be arranged and translated into a so
 
 ## Roadmap:
 
-- Add hover effects to respective day/mealtime on menu hover.
-- Create media queries (low priority: all staff mainly use desktop).
-- Considering automatically updating menus directly after submissions w/o review ()
+- [ ] Add hover effects to respective day/mealtime on menu hover.
+- [ ] Create media queries (low priority: all staff mainly use desktop).
+    - [x] Desktop
+    - [ ] Laptop
+    - [ ] Tablet
+    - [ ] Phone (large)
+    - [ ] Phone (small)
+- [ ] Fix issue where printing page keeps format, but does not show grid stylings.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
