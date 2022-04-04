@@ -254,7 +254,11 @@ body {
 }
 
 .menu-form {
-  margin-top: 3.2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-header {
@@ -292,6 +296,7 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 1px;
+  margin-top: 4rem;
 }
 
 .form-submit-btn:hover {
