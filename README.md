@@ -71,7 +71,7 @@ When submitting a new menu, all inputs will be arranged and translated into a so
     - [ ] Tablet
     - [ ] Phone (large)
     - [ ] Phone (small)
-- [ ] Fix issue where printing page keeps format, but does not show grid stylings.
+- [x] Fix issue where printing page keeps format, but does not show grid stylings.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
