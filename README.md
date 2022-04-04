@@ -11,7 +11,9 @@ This project allows the user to view/submit weekly menus.
 #### Built with
 
 &nbsp;&nbsp; <code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5 icon"></code> &nbsp; HTML
+
 <code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3 icon"></code> &nbsp; CSS
+
 <code><img height="25" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript icon"></code> JavaScript
 
 #### Resources Involved
