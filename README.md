@@ -13,8 +13,10 @@ https://mghmenu.netlify.app/
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#resources-involved">Resources Involved</a></li>
       </ul>
     </li>
+    <li><a href="#purpose">Purpose</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
@@ -68,3 +70,5 @@ When submitting a new menu, all inputs will be arranged and translated into a so
 Andrew Kohn - [Twitter](https://twitter.com/andrewkohn_dev) - [E-mail](mailto:andy@akohn.dev)
 
 Project Link: https://github.com/AndrewKohn/MGH-menu
+
+<p align="right">(<a href="#top">back to top</a>)</p>
