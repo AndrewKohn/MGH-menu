@@ -24,6 +24,7 @@
     <li><a href="#purpose">Purpose</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#what-i-learned">What I learned</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -72,6 +73,22 @@ When submitting a new menu, all inputs will be arranged and translated into a so
     - [ ] Phone (large)
     - [ ] Phone (small)
 - [ ] Fix issue where printing page keeps format, but does not show grid stylings.
+    - [x] Chrome
+    - [ ] Firefox
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## What I learned
+
+This project made me realize the importance of sitting down to write out how I want to format my menu data as well as how I should loop between dom manipulating id elements.
+
+This experience also helped me realize how productive you can be if you set goals and/or coding blocks dedicated to certain portions of the site (i.e. focus on creating grid elements, getting javascript to change html elements in loops/conditions, etc...).  I was still able to maintain productivity when coding for this site while working in between long 12-17 hour work shifts, javascript courses, other programming projects, and along personal projects at home.
+
+Encountering issues like when printing that cause format problems allowed me to dig deeper to find solutions online on stackoverflow and other helpful resources.
+
+I tried added better commenting in my code.
+
+Unique css styling allowed me to become more familiar and knowledgeable with css.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
