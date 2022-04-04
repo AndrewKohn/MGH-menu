@@ -23,6 +23,7 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
+  -webkit-print-color-adjust: exact;
 }
 
 .container {

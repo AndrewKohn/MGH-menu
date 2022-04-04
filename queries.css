@@ -1,0 +1,23 @@
+@media print {
+  .menu-grid {
+    /* Fit in landscape view */
+    transform: scale(0.95);
+  }
+
+  /* No header/footer default when in print preview */
+  @page {
+    margin: 0;
+  }
+
+  .container {
+    background-color: #fff;
+  }
+
+  .menu--meal:hover .meal--text:first-child {
+    color: var(--tertiary);
+  }
+
+  .menu--meal:hover {
+    background-color: var(--secondary);
+  }
+}
