@@ -90,6 +90,8 @@ I tried added better commenting in my code.
 
 Unique css styling allowed me to become more familiar and knowledgeable with css.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Contact
 
 Andrew Kohn - [Twitter](https://twitter.com/andrewkohn_dev) - [E-mail](mailto:andy@akohn.dev)
